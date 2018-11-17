@@ -2,6 +2,8 @@ language: node_js
 node_js:
   - "10"
 
+before_script: "npm i coveralls"
+
 script:
-  - "npm test"
+  - "cross-env NODE_ENV=test jest --coverage --coverageReporters=text-lcov | coveralls"
   - "npm run build"
