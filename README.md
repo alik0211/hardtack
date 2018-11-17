@@ -1,5 +1,7 @@
 # hardtack
 
+[![Travis](https://img.shields.io/travis/alik0211/hardtack/master.svg?style=flat-square)](https://travis-ci.com/alik0211/hardtack)
+
 An ultra-light library for working with cookies in JavaScript.
 
 ## Quick start
