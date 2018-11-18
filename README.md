@@ -32,7 +32,7 @@ hardtack.remove('name');
 ### Browser
 #### Installation
 ```html
-<script src="https://cdn.jsdelivr.net/npm/hardtack@0.0.0/dist/hardtack.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hardtack@1.0.0/dist/hardtack.min.js"></script>
 ```
 #### Usage
 ```html

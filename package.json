@@ -1,6 +1,6 @@
 {
   "name": "hardtack",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "dist/hardtack.min.js",
   "license": "MIT",
   "author": "Ali Gasymov <alik0211alik@gmail.com> (https://alik0211.com/)",
