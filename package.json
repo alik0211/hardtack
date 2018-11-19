@@ -3,6 +3,7 @@
   "description": "An ultra-light library for working with cookies in JavaScript",
   "version": "1.0.0",
   "main": "dist/hardtack.min.js",
+  "types": "src/hardtack.d.ts",
   "license": "MIT",
   "keywords": [
     "cookie",
