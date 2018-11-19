@@ -1,8 +1,20 @@
 {
   "name": "hardtack",
+  "description": "An ultra-light library for working with cookies in JavaScript",
   "version": "1.0.0",
   "main": "dist/hardtack.min.js",
   "license": "MIT",
+  "keywords": [
+    "cookie",
+    "cookies",
+    "js-cookie",
+    "browser"
+  ],
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/alik0211/hardtack.git"
+  },
+  "bugs": "https://github.com/alik0211/hardtack/issues",
   "author": "Ali Gasymov <alik0211alik@gmail.com> (https://alik0211.com/)",
   "scripts": {
     "test": "cross-env NODE_ENV=test jest",
