@@ -2,7 +2,8 @@ import hardtack from '../src/hardtack';
 
 const user = {
   name: 'Ali',
-  surname: 'Gasymov'
+  surname: 'Gasymov',
+  symbols: ';,/?:@&=+$# -_.!~*\'()'
 };
 
 const options = {
@@ -30,6 +31,10 @@ describe('set', () => {
     })).toBe(`surname=${user.surname};expires=${options.expires};secure`);
   });
 
+  test('set value with forbidden characters', () => {
+    expect(hardtack.set('symbols', user.symbols)).toBe(`symbols=${encodeURIComponent(user.symbols)}`);
+  });
+
   test('do not set options if false is passed', () => {
     expect(hardtack.set('surname', user.surname, {
       expires: false,
@@ -46,7 +51,8 @@ describe('get', () => {
   test('get without name return all cookies', () => {
     expect(hardtack.get()).toEqual({
       name: user.name,
-      surname: user.surname
+      surname: user.surname,
+      symbols: user.symbols
     });
   });
 
