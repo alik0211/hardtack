@@ -85,6 +85,6 @@ describe('remove', () => {
     expect(hardtack.get('surname')).toBe(undefined);
     expect(hardtack.get('symbols')).toBe(undefined);
 
-    expect(hardtack.get()).toBe(undefined);
+    expect(hardtack.get()).toEqual({});
   });
 });

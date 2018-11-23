@@ -19,8 +19,8 @@ export default {
     return document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}${attributes}`;
   },
   get(name) {
-    if (document.cookie === '') {
-      return undefined;
+    if (!document.cookie) {
+      return name ? undefined : {};
     }
 
     const parsedCookie = document.cookie.split('; ').reduce((accumulator, item) => {
