@@ -2,36 +2,42 @@ export default {
   set(name, value, options) {
     options = options || {};
 
-    const attributes = Object.keys(options).map(optionName => {
-      const optionValue = options[optionName];
+    const attributes = Object.keys(options)
+      .map(optionName => {
+        const optionValue = options[optionName];
 
-      if (optionValue === false) {
-        return;
-      }
+        if (optionValue === false) {
+          return;
+        }
 
-      if (optionValue === true) {
-        return `;${optionName}`;
-      }
+        if (optionValue === true) {
+          return `;${optionName}`;
+        }
 
-      return `;${optionName}=${optionValue}`
-    }).join('');
+        return `;${optionName}=${optionValue}`;
+      })
+      .join('');
 
-    return document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}${attributes}`;
+    return (document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(
+      value
+    )}${attributes}`);
   },
   get(name) {
     if (!document.cookie) {
       return name ? undefined : {};
     }
 
-    const parsedCookie = document.cookie.split('; ').reduce((accumulator, item) => {
-      const cookieItem = item.split('=');
-      const cookieName = decodeURIComponent(cookieItem[0]);
-      const cookieValue = decodeURIComponent(cookieItem[1]);
+    const parsedCookie = document.cookie
+      .split('; ')
+      .reduce((accumulator, item) => {
+        const cookieItem = item.split('=');
+        const cookieName = decodeURIComponent(cookieItem[0]);
+        const cookieValue = decodeURIComponent(cookieItem[1]);
 
-      accumulator[cookieName] = cookieValue;
+        accumulator[cookieName] = cookieValue;
 
-      return accumulator;
-    }, {});
+        return accumulator;
+      }, {});
 
     return name ? parsedCookie[name] : parsedCookie;
   },
@@ -41,5 +47,5 @@ export default {
     options.expires = 'Thu, 01 Jan 1970 00:00:01 GMT';
 
     return this.set(name, '', options);
-  }
+  },
 };
