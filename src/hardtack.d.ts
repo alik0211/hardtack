@@ -11,7 +11,7 @@ interface Options {
 
 export function set(name: string, value: string, options: Options): string;
 
-export function get(): object | undefined;
+export function get(): object;
 
 export function get(name: string): string | undefined;
 
