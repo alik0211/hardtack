@@ -16,7 +16,7 @@ export default {
       return `;${optionName}=${optionValue}`
     }).join('');
 
-    return document.cookie = `${name}=${value}${attributes}`;
+    return document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}${attributes}`;
   },
   get(name) {
     if (document.cookie === '') {
@@ -25,8 +25,8 @@ export default {
 
     const parsedCookie = document.cookie.split('; ').reduce((accumulator, item) => {
       const cookieItem = item.split('=');
-      const cookieName = cookieItem[0];
-      const cookieValue = cookieItem[1];
+      const cookieName = decodeURIComponent(cookieItem[0]);
+      const cookieValue = decodeURIComponent(cookieItem[1]);
 
       accumulator[cookieName] = cookieValue;
 
