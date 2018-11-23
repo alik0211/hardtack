@@ -3,14 +3,14 @@ import hardtack from '../src/hardtack';
 const user = {
   name: 'Ali',
   surname: 'Gasymov',
-  symbols: ';,/?:@&=+$# -_.!~*\'()'
+  symbols: ";,/?:@&=+$# -_.!~*'()",
 };
 
 const options = {
   path: '/',
   domain: 'alik0211.com',
   expires: 'Sun, 10 Jan 9999 00:00:00 GMT',
-  samesite: 'lax'
+  samesite: 'lax',
 };
 
 describe('set', () => {
@@ -19,29 +19,37 @@ describe('set', () => {
   });
 
   test('set with iterable options', () => {
-    expect(hardtack.set('name', user.name, {
-      expires: options.expires,
-    })).toBe(`name=${user.name};expires=${options.expires}`);
+    expect(
+      hardtack.set('name', user.name, {
+        expires: options.expires,
+      })
+    ).toBe(`name=${user.name};expires=${options.expires}`);
   });
 
   test('set with iterable options and secure', () => {
-    expect(hardtack.set('surname', user.surname, {
-      expires: options.expires,
-      secure: true,
-    })).toBe(`surname=${user.surname};expires=${options.expires};secure`);
+    expect(
+      hardtack.set('surname', user.surname, {
+        expires: options.expires,
+        secure: true,
+      })
+    ).toBe(`surname=${user.surname};expires=${options.expires};secure`);
   });
 
   test('set value with forbidden characters', () => {
-    expect(hardtack.set('symbols', user.symbols, {
-      path: options.path
-    })).toBe(`symbols=${encodeURIComponent(user.symbols)};path=${options.path}`);
+    expect(
+      hardtack.set('symbols', user.symbols, {
+        path: options.path,
+      })
+    ).toBe(`symbols=${encodeURIComponent(user.symbols)};path=${options.path}`);
   });
 
   test('do not set options if false is passed', () => {
-    expect(hardtack.set('surname', user.surname, {
-      expires: false,
-      secure: false,
-    })).toBe(`surname=${user.surname}`);
+    expect(
+      hardtack.set('surname', user.surname, {
+        expires: false,
+        secure: false,
+      })
+    ).toBe(`surname=${user.surname}`);
   });
 });
 
@@ -54,7 +62,7 @@ describe('get', () => {
     expect(hardtack.get()).toEqual({
       name: user.name,
       surname: user.surname,
-      symbols: user.symbols
+      symbols: user.symbols,
     });
   });
 
@@ -65,19 +73,27 @@ describe('get', () => {
 
 describe('remove', () => {
   test('remove without options', () => {
-    expect(hardtack.remove('name')).toBe(`name=;expires=Thu, 01 Jan 1970 00:00:01 GMT`);
+    expect(hardtack.remove('name')).toBe(
+      `name=;expires=Thu, 01 Jan 1970 00:00:01 GMT`
+    );
   });
 
   test('remove despite the option expires', () => {
-    expect(hardtack.remove('surname', {
-      expires: options.expires
-    })).toBe(`surname=;expires=Thu, 01 Jan 1970 00:00:01 GMT`);
+    expect(
+      hardtack.remove('surname', {
+        expires: options.expires,
+      })
+    ).toBe(`surname=;expires=Thu, 01 Jan 1970 00:00:01 GMT`);
   });
 
   test('remove despite the option path', () => {
-    expect(hardtack.remove('symbols', {
-      path: options.path
-    })).toBe(`symbols=;path=${options.path};expires=Thu, 01 Jan 1970 00:00:01 GMT`);
+    expect(
+      hardtack.remove('symbols', {
+        path: options.path,
+      })
+    ).toBe(
+      `symbols=;path=${options.path};expires=Thu, 01 Jan 1970 00:00:01 GMT`
+    );
   });
 
   test('no values after remove', () => {
