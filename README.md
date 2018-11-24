@@ -34,7 +34,10 @@ hardtack.get(); // { name: 'Ali' };
 
 hardtack.get('name'); // Ali;
 
-hardtack.remove('name');
+hardtack.remove('name', {
+  path: '/',
+  domain: 'alik0211.com'
+});
 ```
 
 ### Browser
@@ -56,7 +59,10 @@ hardtack.remove('name');
 
   hardtack.get('name'); // Ali;
 
-  hardtack.remove('name');
+  hardtack.remove('name', {
+    path: '/',
+    domain: 'alik0211.com'
+  });
 </script>
 ```
 
