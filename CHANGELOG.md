@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1 - 2018-11-24
+
+- Fix remove example ([#14](https://github.com/alik0211/hardtack/pull/14))
+
 ## 2.0.0 - 2018-11-23
 
 - Add declaration file on TypeScript ([#5](https://github.com/alik0211/hardtack/pull/5))
