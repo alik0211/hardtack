@@ -2,6 +2,10 @@ export default {
   set(name, value, options) {
     options = options || {};
 
+    const optionsMap = {
+      maxAge: 'max-age',
+    };
+
     const attributes = Object.keys(options)
       .map(optionName => {
         const optionValue = options[optionName];
@@ -14,7 +18,9 @@ export default {
           return `;${optionName}`;
         }
 
-        return `;${optionName}=${optionValue}`;
+        return `;${
+          optionName in optionsMap ? optionsMap[optionName] : optionName
+        }=${optionValue}`;
       })
       .join('');
 

@@ -3,7 +3,7 @@ export as namespace hardtack;
 interface Options {
   path?: string,
   domain?: string,
-  'max-age'?: number,
+  maxAge?: number,
   expires?: string,
   secure?: boolean,
   samesite?: 'lax' | 'strict',
