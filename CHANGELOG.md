@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.0 - 2018-11-26
+
+- Replace the `max-age` with a `maxAge` ([#17](https://github.com/alik0211/hardtack/pull/17))
+- Fix typos in README ([#15](https://github.com/alik0211/hardtack/pull/15))
+
 ## 2.0.1 - 2018-11-24
 
 - Fix remove example ([#14](https://github.com/alik0211/hardtack/pull/14))
