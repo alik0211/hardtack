@@ -9,6 +9,7 @@ const user = {
 const options = {
   path: '/',
   domain: 'alik0211.com',
+  maxAge: 31536000,
   expires: 'Sun, 10 Jan 9999 00:00:00 GMT',
   samesite: 'lax',
 };
@@ -24,6 +25,14 @@ describe('set', () => {
         expires: options.expires,
       })
     ).toBe(`name=${user.name};expires=${options.expires}`);
+  });
+
+  test('set with maxAge', () => {
+    expect(
+      hardtack.set('name', user.name, {
+        maxAge: options.maxAge,
+      })
+    ).toBe(`name=${user.name};max-age=${options.maxAge}`);
   });
 
   test('set with iterable options and secure', () => {

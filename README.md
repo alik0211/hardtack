@@ -9,7 +9,7 @@ An ultra-light library for working with cookies in JavaScript.
 ## Features
 
 - Simple API
-- Ultra-light (**408 bytes** gzipped)
+- Ultra-light (**431 bytes** gzipped)
 - Encoding of forbidden characters
 - Use as a [module](#module) or add to your [browser](#browser)
 
@@ -83,7 +83,9 @@ For example: `example.com` or `subdomain.example.com`
 
 If not specified, this defaults to the host portion of the current document location. Contrary to earlier specifications, leading dots in domain names are ignored, but browsers may decline to set the cookie containing such dots. If a domain is specified, subdomains are always included.
 
-#### options['max-age']: number
+#### options.maxAge: number
+
+You can use `options['max-age']`, the result will be the same.
 
 Max age in seconds. For example: `60*60*24*365` or `31536000` for a year
 
