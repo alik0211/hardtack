@@ -1,7 +1,7 @@
 {
   "name": "hardtack",
   "description": "An ultra-light library for working with cookies in JavaScript",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "main": "dist/hardtack.min.js",
   "module": "src/hardtack.js",
   "types": "src/hardtack.d.ts",
