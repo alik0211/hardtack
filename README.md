@@ -67,7 +67,7 @@ hardtack.remove('name', {
 ```
 
 ## Methods
-### `set(name: stirng, value: stirng, options)`
+### `set(name: string, value: string, options)`
 
 Create a cookie
 
@@ -83,7 +83,7 @@ For example: `example.com` or `subdomain.example.com`
 
 If not specified, this defaults to the host portion of the current document location. Contrary to earlier specifications, leading dots in domain names are ignored, but browsers may decline to set the cookie containing such dots. If a domain is specified, subdomains are always included.
 
-#### options.['max-age']: number
+#### options['max-age']: number
 
 Max age in seconds. For example: `60*60*24*365` or `31536000` for a year
 
@@ -101,10 +101,10 @@ SameSite prevents the browser from sending this cookie along with cross-site req
 
 More about the options of cookies on [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie).
 
-### `get(name: stirng)`
+### `get(name: string)`
 
 Get cookie value
 
-### `remove(name: stirng, options)`
+### `remove(name: string, options)`
 
 Remove cookie. When you delete a cookie, you **must** pass the same `options.path` and `options.domain` that you passed when you created the cookie.
