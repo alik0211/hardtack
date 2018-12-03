@@ -4,8 +4,6 @@ node_js:
 
 cache: npm
 
-before_script: "npm i coveralls"
-
 script:
   - "cross-env NODE_ENV=test jest --coverage --coverageReporters=text-lcov | coveralls"
   - "npm run build"
