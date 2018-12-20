@@ -42,7 +42,7 @@
     "jest": "^23.6.0",
     "lint-staged": "^8.1.0",
     "prettier": "1.15.3",
-    "rollup": "^0.67.0",
+    "rollup": "^0.68.1",
     "rollup-plugin-babel": "^3.0.7",
     "rollup-plugin-uglify": "^6.0.0"
   }
