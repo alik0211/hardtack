@@ -4,6 +4,7 @@ const user = {
   name: 'Ali',
   surname: 'Gasymov',
   symbols: ";,/?:@&=+$# -_.!~*'()",
+  brackets: '()(())()',
 };
 
 const options = {
@@ -60,6 +61,12 @@ describe('set', () => {
       })
     ).toBe(`surname=${user.surname}`);
   });
+
+  test('set cookie with brackets', () => {
+    expect(hardtack.set('(brackets)', user.brackets)).toBe(
+      `(brackets)=${user.brackets}`
+    );
+  });
 });
 
 describe('get', () => {
@@ -67,11 +74,16 @@ describe('get', () => {
     expect(hardtack.get('name')).toBe(user.name);
   });
 
+  test('get cookie with brackets', () => {
+    expect(hardtack.get('(brackets)')).toBe(user.brackets);
+  });
+
   test('get without name return all cookies', () => {
     expect(hardtack.get()).toEqual({
       name: user.name,
       surname: user.surname,
       symbols: user.symbols,
+      '(brackets)': user.brackets,
     });
   });
 
@@ -84,6 +96,12 @@ describe('remove', () => {
   test('remove without options', () => {
     expect(hardtack.remove('name')).toBe(
       `name=;expires=Thu, 01 Jan 1970 00:00:01 GMT`
+    );
+  });
+
+  test('remove cookie with brackets', () => {
+    expect(hardtack.remove('(brackets)')).toBe(
+      `(brackets)=;expires=Thu, 01 Jan 1970 00:00:01 GMT`
     );
   });
 
