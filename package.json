@@ -5,6 +5,10 @@
   "main": "dist/hardtack.min.js",
   "module": "src/hardtack.js",
   "types": "src/hardtack.d.ts",
+  "files": [
+    "/dist",
+    "/src"
+  ],
   "license": "MIT",
   "keywords": [
     "cookie",
