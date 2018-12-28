@@ -131,6 +131,18 @@ describe('remove', () => {
     );
   });
 
+  test('do not change the original options object', () => {
+    const immutableOptions = {
+      path: options.path,
+    };
+
+    hardtack.remove('symbols', immutableOptions);
+
+    expect(immutableOptions).toEqual({
+      path: options.path,
+    });
+  });
+
   test('no values after remove', () => {
     expect(hardtack.get('name')).toBe(undefined);
     expect(hardtack.get('surname')).toBe(undefined);
