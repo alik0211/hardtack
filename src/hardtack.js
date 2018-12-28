@@ -20,7 +20,7 @@ export default {
 
         return `;${
           optionName in optionsMap ? optionsMap[optionName] : optionName
-        }=${optionValue}`;
+        }=${String(optionValue).split(';')[0]}`;
       })
       .join('');
 

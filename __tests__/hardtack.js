@@ -62,6 +62,14 @@ describe('set', () => {
     ).toBe(`surname=${user.surname}`);
   });
 
+  test('set what is before the semicolon in the option value', () => {
+    expect(
+      hardtack.set('surname', user.surname, {
+        path: `${options.path};expires=Thu, 01 Jan 1970 00:00:01 GMT`,
+      })
+    ).toBe(`surname=${user.surname};path=${options.path}`);
+  });
+
   test('set cookie with brackets', () => {
     expect(hardtack.set('(brackets)', user.brackets)).toBe(
       `(brackets)=${user.brackets}`
