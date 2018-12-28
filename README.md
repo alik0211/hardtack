@@ -6,6 +6,27 @@
 
 An ultra-light library for working with cookies in JavaScript.
 
+## Table of contents
+
+- [Features](#features)
+- [Quick start](#quick-start)
+  - [Module](#module)
+    - [Installation](#installation)
+    - [Usage](#usage)
+  - [Browser](#browser)
+    - [Installation](#installation-1)
+    - [Usage](#usage-1)
+- [Methods](#methods)
+  - [set(name: string, value: string, options)](#setname-string-value-string-options)
+    - [options.path: string](#optionspath-string)
+    - [options.domain: string](#optionsdomain-string)
+    - [options.maxAge: number](#optionsmaxage-number)
+    - [options.expires: string](#optionsexpires-string)
+    - [options.secure: boolean](#optionssecure-boolean)
+    - [options.samesite: string](#optionssamesite-string)
+  - [get(name: string)](#getname-string)
+  - [remove(name: string, options)](#removename-string-options)
+
 ## Features
 
 - Simple API
