@@ -9,7 +9,7 @@ An ultra-light library for working with cookies in JavaScript.
 ## Features
 
 - Simple API
-- Ultra-light (**431 bytes** gzipped)
+- Ultra-light (**450 bytes** gzipped)
 - Encoding of forbidden characters
 - Use as a [module](#module) or add to your [browser](#browser)
 
