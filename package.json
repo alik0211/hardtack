@@ -16,6 +16,13 @@
     "js-cookie",
     "browser"
   ],
+  "size-limit": [
+    {
+      "path": "dist/hardtack.min.js",
+      "limit": "457 B",
+      "webpack": false
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/alik0211/hardtack.git"
@@ -24,7 +31,7 @@
   "author": "Ali Gasymov <alik0211alik@gmail.com> (https://alik0211.com/)",
   "scripts": {
     "test": "cross-env NODE_ENV=test jest",
-    "build": "cross-env NODE_ENV=build rollup -c"
+    "build": "cross-env NODE_ENV=build rollup -c && size-limit"
   },
   "husky": {
     "hooks": {
@@ -48,6 +55,7 @@
     "prettier": "1.15.3",
     "rollup": "^0.68.1",
     "rollup-plugin-babel": "^3.0.7",
-    "rollup-plugin-uglify": "^6.0.0"
+    "rollup-plugin-uglify": "^6.0.0",
+    "size-limit": "^0.21.1"
   }
 }
