@@ -67,7 +67,7 @@ hardtack.remove('name', {
 ### Browser
 #### Installation
 ```html
-<script src="https://cdn.jsdelivr.net/npm/hardtack@2.1.0/dist/hardtack.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hardtack@3.0.0/dist/hardtack.min.js"></script>
 ```
 #### Usage
 ```html
