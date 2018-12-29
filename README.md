@@ -4,7 +4,7 @@
 [![Travis](https://img.shields.io/travis/com/alik0211/hardtack/master.svg?style=flat-square)](https://travis-ci.com/alik0211/hardtack)
 [![Coverage Status](https://img.shields.io/coveralls/github/alik0211/hardtack/master.svg?style=flat-square)](https://coveralls.io/github/alik0211/hardtack?branch=master)
 
-An ultra-light library for working with cookies in JavaScript.
+> An ultra-light library for working with cookies in JavaScript.
 
 ## Table of contents
 
@@ -35,6 +35,9 @@ An ultra-light library for working with cookies in JavaScript.
 - Use as a [module](#module) or add to your [browser](#browser)
 
 ## Quick start
+
+hardtack uses [`Object.assign`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign). Add [polyfill](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill) if you need to support [older browsers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Browser_compatibility)
+
 ### Module
 #### Installation
 ```
