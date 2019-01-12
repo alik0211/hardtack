@@ -2,17 +2,24 @@ import babel from 'rollup-plugin-babel';
 import { uglify } from 'rollup-plugin-uglify';
 import pkg from './package.json';
 
-export default {
-  input: 'src/hardtack.js',
-  output: {
-    file: pkg.main,
-    format: 'umd',
-    name: pkg.name,
+const SOURCE = 'src/hardtack.js';
+
+export default [
+  {
+    input: SOURCE,
+    output: {
+      file: pkg.main,
+      format: 'cjs',
+    },
+    plugins: [babel()],
   },
-  plugins: [
-    babel({
-      exclude: 'node_modules/**'
-    }),
-    uglify()
-  ]
-};
+  {
+    input: SOURCE,
+    output: {
+      file: 'dist/hardtack.min.js',
+      format: 'iife',
+      name: pkg.name,
+    },
+    plugins: [babel(), uglify()],
+  },
+];
