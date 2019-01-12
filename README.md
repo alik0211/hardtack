@@ -30,13 +30,11 @@
 ## Features
 
 - Simple API
-- Ultra-light (**383 bytes** gzipped)
+- Ultra-light (**424 bytes** gzipped)
 - Encoding of forbidden characters
 - Use as a [module](#module) or add to your [browser](#browser)
 
 ## Quick start
-
-hardtack uses [`Object.assign`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign). Add [polyfill](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill) if you need to support [older browsers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Browser_compatibility)
 
 ### Module
 #### Installation

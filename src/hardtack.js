@@ -1,6 +1,8 @@
+import { merge } from './utils';
+
 export default {
   set(name, value) {
-    const options = Object.assign({}, arguments[2]);
+    const options = merge(arguments[2]);
 
     const optionsMap = {
       maxAge: 'max-age',
@@ -48,7 +50,7 @@ export default {
     return name ? parsedCookie[name] : parsedCookie;
   },
   remove(name) {
-    const options = Object.assign({}, arguments[1], {
+    const options = merge(arguments[1], {
       expires: 'Thu, 01 Jan 1970 00:00:01 GMT',
     });
 

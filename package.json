@@ -1,6 +1,6 @@
 {
   "name": "hardtack",
-  "description": "An ultra-light (383 bytes) library for working with cookies in JavaScript",
+  "description": "An ultra-light (424 bytes) library for working with cookies in JavaScript",
   "version": "3.0.0",
   "main": "dist/hardtack.cjs.js",
   "module": "src/hardtack.js",
@@ -20,7 +20,7 @@
   "size-limit": [
     {
       "path": "dist/hardtack.min.js",
-      "limit": "383 B",
+      "limit": "424 B",
       "webpack": false
     }
   ],
