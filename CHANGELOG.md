@@ -1,5 +1,14 @@
 # Changelog
 
+## [4.0.0](https://github.com/alik0211/hardtack/compare/v3.0.0...v4.0.0) - 2019-01-13
+
+- Delete processing to false in the option value ([#41](https://github.com/alik0211/hardtack/pull/41))
+- Change the processing method of the parameter maxAge ([#38](https://github.com/alik0211/hardtack/pull/38))
+- Add ES module ([#36](https://github.com/alik0211/hardtack/pull/36))
+- Get rid of Object.assign ([#34](https://github.com/alik0211/hardtack/pull/34))
+- Add iife build ([#32](https://github.com/alik0211/hardtack/pull/32))
+- Update rollup ([#30](https://github.com/alik0211/hardtack/pull/30))
+
 ## [3.0.0](https://github.com/alik0211/hardtack/compare/v2.1.0...v3.0.0) - 2018-12-29
 
 - Do not change the original options object. Example problem in [#26](https://github.com/alik0211/hardtack/issues/26) ([#27](https://github.com/alik0211/hardtack/pull/27))
