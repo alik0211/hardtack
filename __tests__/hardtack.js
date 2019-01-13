@@ -53,15 +53,6 @@ describe('set', () => {
     ).toBe(`symbols=${encodeURIComponent(user.symbols)};path=${options.path}`);
   });
 
-  test('do not set options if false is passed', () => {
-    expect(
-      hardtack.set('surname', user.surname, {
-        expires: false,
-        secure: false,
-      })
-    ).toBe(`surname=${user.surname}`);
-  });
-
   test('set what is before the semicolon in the option value', () => {
     expect(
       hardtack.set('surname', user.surname, {

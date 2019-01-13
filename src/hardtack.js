@@ -8,10 +8,6 @@ export default {
       .map(optionName => {
         const optionValue = options[optionName];
 
-        if (optionValue === false) {
-          return;
-        }
-
         if (optionValue === true) {
           return `;${optionName}`;
         }
