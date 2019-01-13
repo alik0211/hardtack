@@ -3,7 +3,7 @@
   "description": "An ultra-light (424 bytes) library for working with cookies in JavaScript",
   "version": "3.0.0",
   "main": "dist/hardtack.cjs.js",
-  "module": "src/hardtack.js",
+  "module": "dist/hardtack.esm.js",
   "types": "src/hardtack.d.ts",
   "files": [
     "/dist",

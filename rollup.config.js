@@ -7,10 +7,16 @@ const SOURCE = 'src/hardtack.js';
 export default [
   {
     input: SOURCE,
-    output: {
-      file: pkg.main,
-      format: 'cjs',
-    },
+    output: [
+      {
+        file: pkg.main,
+        format: 'cjs',
+      },
+      {
+        file: pkg.module,
+        format: 'esm',
+      },
+    ],
     plugins: [babel()],
   },
   {
