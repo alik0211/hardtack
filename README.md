@@ -6,6 +6,33 @@
 
 > An ultra-light library for working with cookies in JavaScript.
 
+## Features
+
+- Simple API
+- Ultra-light (**409 bytes** gzipped)
+- Encoding of forbidden characters
+- Use as a [module](#module) or add to your [browser](#browser)
+
+## Example
+
+```javascript
+hardtack.set('name', 'Ali', {
+  path: '/',
+  domain: 'alik0211.com',
+  expires: 'Sun, 10 Jan 9999 00:00:00 GMT',
+  samesite: 'lax'
+});
+
+hardtack.get(); // { name: 'Ali' };
+
+hardtack.get('name'); // Ali;
+
+hardtack.remove('name', {
+  path: '/',
+  domain: 'alik0211.com'
+});
+```
+
 ## Table of contents
 
 - [Features](#features)
@@ -26,13 +53,6 @@
     - [options.samesite: string](#optionssamesite-string)
   - [get(name: string)](#getname-string)
   - [remove(name: string, options)](#removename-string-options)
-
-## Features
-
-- Simple API
-- Ultra-light (**409 bytes** gzipped)
-- Encoding of forbidden characters
-- Use as a [module](#module) or add to your [browser](#browser)
 
 ## Quick start
 
