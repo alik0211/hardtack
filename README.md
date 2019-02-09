@@ -35,7 +35,6 @@ hardtack.remove('name', {
 
 ## Table of contents
 
-- [Features](#features)
 - [Quick start](#quick-start)
   - [Module](#module)
     - [Installation](#installation)
