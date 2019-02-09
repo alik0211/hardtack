@@ -8,6 +8,11 @@ export default {
       .map(optionName => {
         const optionValue = options[optionName];
 
+        // Skip option if the value is passed as false, null, or undefined,
+        // but don't ignore maxAge:0
+        if (optionValue === false || optionValue == null) {
+          return '';
+        }
         if (optionValue === true) {
           return `;${optionName}`;
         }

@@ -20,12 +20,36 @@ describe('set', () => {
     expect(hardtack.set('name', user.name)).toBe(`name=${user.name}`);
   });
 
+  test('set with false flag', () => {
+    expect(
+      hardtack.set('name', user.name, {
+        secure: false,
+      })
+    ).toBe(`name=${user.name}`);
+  });
+
+  test('set with undefined flag', () => {
+    expect(
+      hardtack.set('name', user.name, {
+        secure: undefined,
+      })
+    ).toBe(`name=${user.name}`);
+  });
+
   test('set with iterable options', () => {
     expect(
       hardtack.set('name', user.name, {
         expires: options.expires,
       })
     ).toBe(`name=${user.name};expires=${options.expires}`);
+  });
+
+  test('set with maxAge of 0', () => {
+    expect(
+      hardtack.set('name', user.name, {
+        maxAge: 0,
+      })
+    ).toBe(`name=${user.name};max-age=0`);
   });
 
   test('set with maxAge', () => {
