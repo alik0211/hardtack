@@ -1,5 +1,9 @@
 # Changelog
 
+## [4.0.1](https://github.com/alik0211/hardtack/compare/v4.0.0...v4.0.1) - 2019-02-09
+
+- Add features and example before TOC ([9698c3](https://github.com/alik0211/hardtack/commit/9698c3c0d743b0145ec50761336dddfe8937f9f6))
+
 ## [4.0.0](https://github.com/alik0211/hardtack/compare/v3.0.0...v4.0.0) - 2019-01-13
 
 - Delete processing to false in the option value ([#41](https://github.com/alik0211/hardtack/pull/41))
