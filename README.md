@@ -9,7 +9,7 @@
 ## Features
 
 - Simple API
-- Ultra-light (**409 bytes** gzipped)
+- Ultra-light (**405 bytes** gzipped)
 - Encoding of forbidden characters
 - Use as a [module](#module) or add to your [browser](#browser)
 

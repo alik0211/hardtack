@@ -14,7 +14,7 @@ export default {
 
         const finalOptionName =
           optionName === 'maxAge' ? 'max-age' : optionName;
-        const finalOptionValue = String(optionValue).split(';')[0];
+        const finalOptionValue = `${optionValue}`.split(';')[0];
 
         return `;${finalOptionName}=${finalOptionValue}`;
       })
