@@ -25,21 +25,21 @@ export default {
     )}${attributes}`);
   },
   get(name) {
-    if (!document.cookie) {
+    const { cookie } = document;
+
+    if (!cookie) {
       return name ? undefined : {};
     }
 
-    const parsedCookie = document.cookie
-      .split('; ')
-      .reduce((accumulator, item) => {
-        const cookieItem = item.split('=');
-        const cookieName = decodeURIComponent(cookieItem[0]);
-        const cookieValue = decodeURIComponent(cookieItem[1]);
+    const parsedCookie = cookie.split('; ').reduce((accumulator, item) => {
+      const cookieItem = item.split('=');
+      const cookieName = decodeURIComponent(cookieItem[0]);
+      const cookieValue = decodeURIComponent(cookieItem[1]);
 
-        accumulator[cookieName] = cookieValue;
+      accumulator[cookieName] = cookieValue;
 
-        return accumulator;
-      }, {});
+      return accumulator;
+    }, {});
 
     return name ? parsedCookie[name] : parsedCookie;
   },
