@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.1.0](https://github.com/alik0211/hardtack/compare/v4.0.1...v4.1.0) - 2019-02-13
+
+In this release, the library size is reduced by 6 bytes. No new features.
+
+- Take out the document.cookie to variable ([#46](https://github.com/alik0211/hardtack/pull/46))
+- Replace the string constructor with a concatenation ([#44](https://github.com/alik0211/hardtack/pull/44))
+- Remove features from TOC ([5139eb](https://github.com/alik0211/hardtack/commit/9698c3c0d743b0145ec50761336dddfe8937f9f6))
+
 ## [4.0.1](https://github.com/alik0211/hardtack/compare/v4.0.0...v4.0.1) - 2019-02-09
 
 - Add features and example before TOC ([9698c3](https://github.com/alik0211/hardtack/commit/9698c3c0d743b0145ec50761336dddfe8937f9f6))
