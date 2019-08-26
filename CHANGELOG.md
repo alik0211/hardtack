@@ -1,5 +1,9 @@
 # Changelog
 
+## [4.1.1](https://github.com/alik0211/hardtack/compare/v4.1.0...v4.1.1) - 2019-08-26
+
+- Update examples ([4c334d](https://github.com/alik0211/hardtack/commit/4c334d087901b8ac2dbeabbe48ad4f45edaf2e99))
+
 ## [4.1.0](https://github.com/alik0211/hardtack/compare/v4.0.1...v4.1.0) - 2019-02-13
 
 In this release, the library size is reduced by 6 bytes. No new features.
