@@ -18,8 +18,8 @@
 ```javascript
 hardtack.set('name', 'Ali', {
   path: '/',
-  domain: 'alik0211.com',
-  expires: 'Sun, 10 Jan 9999 00:00:00 GMT',
+  domain: 'gasymov.com',
+  maxAge: 31536000, // one year
   samesite: 'lax'
 });
 
@@ -29,7 +29,7 @@ hardtack.get('name'); // Ali;
 
 hardtack.remove('name', {
   path: '/',
-  domain: 'alik0211.com'
+  domain: 'gasymov.com'
 });
 ```
 
@@ -66,8 +66,8 @@ import hardtack from 'hardtack';
 
 hardtack.set('name', 'Ali', {
   path: '/',
-  domain: 'alik0211.com',
-  expires: 'Sun, 10 Jan 9999 00:00:00 GMT',
+  domain: 'gasymov.com',
+  maxAge: 31536000, // 1 year
   samesite: 'lax'
 });
 
@@ -77,7 +77,7 @@ hardtack.get('name'); // Ali;
 
 hardtack.remove('name', {
   path: '/',
-  domain: 'alik0211.com'
+  domain: 'gasymov.com'
 });
 ```
 
@@ -91,8 +91,8 @@ hardtack.remove('name', {
 <script>
   hardtack.set('name', 'Ali', {
     path: '/',
-    domain: 'alik0211.com',
-    expires: 'Sun, 10 Jan 9999 00:00:00 GMT',
+    domain: 'gasymov.com',
+    maxAge: 31536000, // 1 year
     samesite: 'lax'
   });
 
@@ -102,7 +102,7 @@ hardtack.remove('name', {
 
   hardtack.remove('name', {
     path: '/',
-    domain: 'alik0211.com'
+    domain: 'gasymov.com'
   });
 </script>
 ```
