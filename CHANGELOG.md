@@ -1,5 +1,10 @@
 # Changelog
 
+## [4.1.2](https://github.com/alik0211/hardtack/compare/v4.1.1...v4.1.2) - 2019-10-01
+
+- Add prepublishOnly script ([ae1c00](https://github.com/alik0211/hardtack/commit/ae1c00f6f25fb5aaf8ba6ffce6334485805ecb55))
+- Fix package size ([e18178](https://github.com/alik0211/hardtack/commit/e181780628fc78f78f1dc29017230eae7640151f))
+
 ## [4.1.1](https://github.com/alik0211/hardtack/compare/v4.1.0...v4.1.1) - 2019-08-26
 
 - Update examples ([4c334d](https://github.com/alik0211/hardtack/commit/4c334d087901b8ac2dbeabbe48ad4f45edaf2e99))
