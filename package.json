@@ -32,7 +32,8 @@
   "author": "Ali Gasymov <alik0211alik@gmail.com> (https://alik0211.com/)",
   "scripts": {
     "test": "cross-env NODE_ENV=test jest",
-    "build": "cross-env NODE_ENV=build rollup -c && size-limit"
+    "build": "cross-env NODE_ENV=build rollup -c && size-limit",
+    "prepublishOnly": "run-s build"
   },
   "husky": {
     "hooks": {
@@ -53,6 +54,7 @@
     "husky": "^1.2.0",
     "jest": "^23.6.0",
     "lint-staged": "^8.1.0",
+    "npm-run-all": "4.1.5",
     "prettier": "1.15.3",
     "rollup": "^1.1.0",
     "rollup-plugin-babel": "^3.0.7",
