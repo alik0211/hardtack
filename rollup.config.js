@@ -23,7 +23,7 @@ export default [
     input: SOURCE,
     output: {
       file: 'dist/hardtack.min.js',
-      format: 'iife',
+      format: 'umd',
       name: pkg.name,
     },
     plugins: [babel(), uglify()],
