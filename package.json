@@ -30,6 +30,7 @@
   },
   "bugs": "https://github.com/alik0211/hardtack/issues",
   "author": "Ali Gasymov <alik0211alik@gmail.com> (https://alik0211.com/)",
+  "homepage": "https://github.com/alik0211/hardtack#readme",
   "scripts": {
     "test": "cross-env NODE_ENV=test jest",
     "build": "cross-env NODE_ENV=build rollup -c && size-limit",
