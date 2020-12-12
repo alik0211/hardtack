@@ -34,7 +34,7 @@
     "test": "jest",
     "size": "size-limit",
     "build": "rollup -c",
-    "prepublishOnly": "size-limit"
+    "prepublishOnly": "yarn size && yarn build && yarn test"
   },
   "devDependencies": {
     "@babel/core": "7.12.10",
