@@ -39,5 +39,5 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Run build
-        run: yarn build
+      - name: Check size
+        run: yarn size
