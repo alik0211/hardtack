@@ -1,9 +1,0 @@
-language: node_js
-node_js:
-  - "10"
-
-cache: npm
-
-script:
-  - "cross-env NODE_ENV=test jest --coverage --coverageReporters=text-lcov | coveralls"
-  - "npm run build"
