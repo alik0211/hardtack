@@ -6,18 +6,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.x]
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 14.x
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
@@ -36,7 +32,12 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: Run tests
-        run: cross-env NODE_ENV=test jest --coverage --coverageReporters=text-lcov | coveralls
+        run: yarn test:coverage
+
+      - name: Coveralls
+          uses: coverallsapp/github-action@master
+          with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run build
         run: yarn build
