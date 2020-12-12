@@ -34,10 +34,10 @@ jobs:
       - name: Run tests
         run: yarn test:coverage
 
-      - name: Coveralls
-          uses: coverallsapp/github-action@master
-          with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Coveralls
+      #     uses: coverallsapp/github-action@master
+      #     with:
+      #       github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run build
         run: yarn build
