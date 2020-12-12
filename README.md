@@ -1,7 +1,7 @@
 # hardtack
 
 [![NPM](https://img.shields.io/npm/v/hardtack.svg?style=flat-square)](https://www.npmjs.com/package/hardtack)
-[![Travis](https://img.shields.io/travis/com/alik0211/hardtack/master.svg?style=flat-square)](https://travis-ci.com/alik0211/hardtack)
+[![GitHub Actions](https://img.shields.io/github/workflow/status/alik0211/hardtack/Unit%20tests/master?style=flat-square)](https://github.com/alik0211/hardtack/actions?query=branch%3Amaster)
 [![Coverage Status](https://img.shields.io/coveralls/github/alik0211/hardtack/master.svg?style=flat-square)](https://coveralls.io/github/alik0211/hardtack?branch=master)
 
 > An ultra-light library for working with cookies in JavaScript.
