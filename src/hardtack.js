@@ -1,53 +1,9 @@
-import { merge } from './utils';
+import set from './set';
+import get from './get';
+import remove from './remove';
 
 export default {
-  set(name, value) {
-    const options = merge(arguments[2]);
-
-    const attributes = Object.keys(options)
-      .map(optionName => {
-        const optionValue = options[optionName];
-
-        if (optionValue === true) {
-          return `;${optionName}`;
-        }
-
-        const finalOptionName =
-          optionName === 'maxAge' ? 'max-age' : optionName;
-        const finalOptionValue = `${optionValue}`.split(';')[0];
-
-        return `;${finalOptionName}=${finalOptionValue}`;
-      })
-      .join('');
-
-    return (document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(
-      value
-    )}${attributes}`);
-  },
-  get(name) {
-    const { cookie } = document;
-
-    if (!cookie) {
-      return name ? undefined : {};
-    }
-
-    const parsedCookie = cookie.split('; ').reduce((accumulator, item) => {
-      const cookieItem = item.split('=');
-      const cookieName = decodeURIComponent(cookieItem[0]);
-      const cookieValue = decodeURIComponent(cookieItem[1]);
-
-      accumulator[cookieName] = cookieValue;
-
-      return accumulator;
-    }, {});
-
-    return name ? parsedCookie[name] : parsedCookie;
-  },
-  remove(name) {
-    const options = merge(arguments[1], {
-      expires: 'Thu, 01 Jan 1970 00:00:01 GMT',
-    });
-
-    return this.set(name, '', options);
-  },
+  set,
+  get,
+  remove,
 };
