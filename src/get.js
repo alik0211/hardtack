@@ -18,4 +18,4 @@ function get(name) {
   return name ? parsedCookie[name] : parsedCookie;
 }
 
-export default get;
+module.exports = { get };

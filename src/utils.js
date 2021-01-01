@@ -1,4 +1,4 @@
-export function merge() {
+function merge() {
   const result = {};
 
   for (let i = 0; i < arguments.length; i++) {
@@ -11,3 +11,5 @@ export function merge() {
 
   return result;
 }
+
+module.exports = { merge };

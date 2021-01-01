@@ -1,4 +1,4 @@
-import { merge } from './utils';
+const { merge } = require('./utils');
 
 function set(name, value) {
   const options = merge(arguments[2]);
@@ -23,4 +23,4 @@ function set(name, value) {
   )}${attributes}`);
 }
 
-export default set;
+module.exports = { set };

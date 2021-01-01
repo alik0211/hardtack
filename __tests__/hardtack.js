@@ -1,4 +1,4 @@
-import hardtack from '../src/hardtack';
+const hardtack = require('../src/hardtack');
 
 const user = {
   name: 'Ali',

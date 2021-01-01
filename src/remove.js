@@ -1,5 +1,5 @@
-import set from './set';
-import { merge } from './utils';
+const { set } = require('./set');
+const { merge } = require('./utils');
 
 function remove(name) {
   const options = merge(arguments[1], {
@@ -9,4 +9,4 @@ function remove(name) {
   return set(name, '', options);
 }
 
-export default remove;
+module.exports = { remove };

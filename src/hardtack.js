@@ -1,8 +1,8 @@
-import set from './set';
-import get from './get';
-import remove from './remove';
+const { set } = require('./set');
+const { get } = require('./get');
+const { remove } = require('./remove');
 
-export default {
+module.exports = {
   set,
   get,
   remove,

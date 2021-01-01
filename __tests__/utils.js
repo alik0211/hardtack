@@ -1,4 +1,4 @@
-import { merge } from '../src/utils';
+const { merge } = require('../src/utils');
 
 const options = {
   path: '/',
