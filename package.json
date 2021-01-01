@@ -1,6 +1,6 @@
 {
   "name": "hardtack",
-  "description": "An ultra-light (335 bytes) library for working with cookies in JavaScript",
+  "description": "An ultra-light (395 bytes) library for working with cookies in JavaScript",
   "version": "4.1.2",
   "files": [
     "index.js",

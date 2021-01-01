@@ -9,7 +9,7 @@
 ## Features
 
 - Simple API
-- Ultra-light (**335 bytes** minified and gzipped). No dependencies. [Size Limit](https://github.com/ai/size-limit) controls the size.
+- Ultra-light (**395 bytes** minified and gzipped). No dependencies. [Size Limit](https://github.com/ai/size-limit) controls the size.
 - Encoding of forbidden characters
 
 ## Example
