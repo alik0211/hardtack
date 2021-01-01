@@ -16,8 +16,24 @@
   ],
   "size-limit": [
     {
-      "path": "src/hardtack.js",
-      "limit": "335 B"
+      "name": "Full library",
+      "path": "index.js",
+      "limit": "395 B"
+    },
+    {
+      "name": "Method get",
+      "path": "src/get/index.js",
+      "limit": "107 B"
+    },
+    {
+      "name": "Method set",
+      "path": "src/set/index.js",
+      "limit": "213 B"
+    },
+    {
+      "name": "Method remove",
+      "path": "src/remove/index.js",
+      "limit": "277 B"
     }
   ],
   "repository": {
@@ -30,7 +46,7 @@
   "scripts": {
     "test": "jest",
     "size": "size-limit",
-    "prepublishOnly": "yarn size && yarn test"
+    "prepublishOnly": "yarn test && yarn size"
   },
   "devDependencies": {
     "@babel/core": "7.12.10",
