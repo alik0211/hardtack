@@ -30,8 +30,7 @@
   "scripts": {
     "test": "jest",
     "size": "size-limit",
-    "build": "rollup -c",
-    "prepublishOnly": "yarn size && yarn build && yarn test"
+    "prepublishOnly": "yarn size && yarn test"
   },
   "devDependencies": {
     "@babel/core": "7.12.10",
@@ -40,9 +39,6 @@
     "dual-publish": "1.0.3",
     "jest": "26.6.3",
     "prettier": "2.2.1",
-    "rollup": "1.32.1",
-    "rollup-plugin-babel": "4.4.0",
-    "rollup-plugin-uglify": "6.0.4",
     "size-limit": "4.9.1"
   }
 }
