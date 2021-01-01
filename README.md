@@ -11,7 +11,6 @@
 - Simple API
 - Ultra-light (**335 bytes** minified and gzipped). No dependencies. [Size Limit](https://github.com/ai/size-limit) controls the size.
 - Encoding of forbidden characters
-- Use as a [module](#module) or add to your [browser](#browser)
 
 ## Example
 
@@ -36,12 +35,8 @@ hardtack.remove('name', {
 ## Table of contents
 
 - [Quick start](#quick-start)
-  - [Module](#module)
-    - [Installation](#installation)
-    - [Usage](#usage)
-  - [Browser](#browser)
-    - [Installation](#installation-1)
-    - [Usage](#usage-1)
+  - [Installation](#installation)
+  - [Usage](#usage)
 - [Methods](#methods)
   - [set(name: string, value: string, options)](#setname-string-value-string-options)
     - [options.path: string](#optionspath-string)
@@ -55,12 +50,14 @@ hardtack.remove('name', {
 
 ## Quick start
 
-### Module
-#### Installation
+### Installation
+```sh
+yarn add hardtack -E
+# or
+npm i hardtack -E
 ```
-npm install hardtack
-```
-#### Usage
+
+### Usage
 ```javascript
 import hardtack from 'hardtack';
 
@@ -79,32 +76,6 @@ hardtack.remove('name', {
   path: '/',
   domain: 'gasymov.com'
 });
-```
-
-### Browser
-#### Installation
-```html
-<script src="https://cdn.jsdelivr.net/npm/hardtack@4.1.2/dist/hardtack.min.js"></script>
-```
-#### Usage
-```html
-<script>
-  hardtack.set('name', 'Ali', {
-    path: '/',
-    domain: 'gasymov.com',
-    maxAge: 31536000, // 1 year
-    samesite: 'lax'
-  });
-
-  hardtack.get(); // { name: 'Ali' };
-
-  hardtack.get('name'); // Ali;
-
-  hardtack.remove('name', {
-    path: '/',
-    domain: 'gasymov.com'
-  });
-</script>
 ```
 
 ## Methods
