@@ -1,5 +1,5 @@
-const { set } = require('./set');
-const { merge } = require('./utils');
+const { set } = require('../set');
+const { merge } = require('../utils');
 
 function remove(name) {
   const options = merge(arguments[1], {

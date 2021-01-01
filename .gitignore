@@ -1,6 +1,5 @@
-/node_modules
 /coverage
-/dist
-/.vscode
+/node_modules
+/dual-publish-tmp
 
 package-lock.json

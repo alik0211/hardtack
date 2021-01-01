@@ -2,12 +2,9 @@
   "name": "hardtack",
   "description": "An ultra-light (335 bytes) library for working with cookies in JavaScript",
   "version": "4.1.2",
-  "main": "dist/hardtack.cjs.js",
-  "module": "dist/hardtack.esm.js",
-  "types": "src/hardtack.d.ts",
   "files": [
-    "/dist",
-    "/src"
+    "index.js",
+    "src/**/*.js"
   ],
   "license": "MIT",
   "keywords": [
@@ -40,6 +37,7 @@
     "@babel/core": "7.12.10",
     "@babel/preset-env": "7.12.10",
     "@size-limit/preset-small-lib": "4.9.1",
+    "dual-publish": "1.0.3",
     "jest": "26.6.3",
     "prettier": "2.2.1",
     "rollup": "1.32.1",

@@ -1,4 +1,4 @@
-const hardtack = require('../src/hardtack');
+const hardtack = require('../');
 
 const user = {
   name: 'Ali',

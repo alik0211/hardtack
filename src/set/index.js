@@ -1,4 +1,4 @@
-const { merge } = require('./utils');
+const { merge } = require('../utils');
 
 function set(name, value) {
   const options = merge(arguments[2]);
