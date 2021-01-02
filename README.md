@@ -12,26 +12,6 @@
 - Ultra-light (**395 bytes** minified and gzipped). No dependencies. [Size Limit](https://github.com/ai/size-limit) controls the size.
 - Encoding of forbidden characters
 
-## Example
-
-```javascript
-hardtack.set('name', 'Ali', {
-  path: '/',
-  domain: 'gasymov.com',
-  maxAge: 31536000, // one year
-  samesite: 'lax'
-});
-
-hardtack.get(); // { name: 'Ali' };
-
-hardtack.get('name'); // Ali;
-
-hardtack.remove('name', {
-  path: '/',
-  domain: 'gasymov.com'
-});
-```
-
 ## Table of contents
 
 - [Quick start](#quick-start)
@@ -59,7 +39,12 @@ npm i hardtack -E
 
 ### Usage
 ```javascript
+// Load the full library
 import hardtack from 'hardtack';
+// Load the necessary method
+import get from 'hardtack/src/get';
+import set from 'hardtack/src/set';
+import remove from 'hardtack/src/remove';
 
 hardtack.set('name', 'Ali', {
   path: '/',
