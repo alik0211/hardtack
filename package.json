@@ -18,22 +18,22 @@
     {
       "name": "Full library",
       "path": "index.js",
-      "limit": "395 B"
+      "limit": "375 B"
     },
     {
       "name": "Method get",
       "path": "src/get/index.js",
-      "limit": "107 B"
+      "limit": "104 B"
     },
     {
       "name": "Method set",
       "path": "src/set/index.js",
-      "limit": "213 B"
+      "limit": "208 B"
     },
     {
       "name": "Method remove",
       "path": "src/remove/index.js",
-      "limit": "277 B"
+      "limit": "266 B"
     }
   ],
   "repository": {

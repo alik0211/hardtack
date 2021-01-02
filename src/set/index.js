@@ -23,4 +23,4 @@ function set(name, value) {
   )}${attributes}`);
 }
 
-module.exports = { set };
+module.exports = set;

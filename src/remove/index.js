@@ -1,4 +1,4 @@
-const { set } = require('../set');
+const set = require('../set');
 const { merge } = require('../utils');
 
 function remove(name) {
@@ -9,4 +9,4 @@ function remove(name) {
   return set(name, '', options);
 }
 
-module.exports = { remove };
+module.exports = remove;
