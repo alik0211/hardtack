@@ -1,5 +1,13 @@
 # Changelog
 
+## [5.0.0](https://github.com/alik0211/hardtack/compare/v4.1.2...v5.0.0) - 2021-01-02
+
+- The library size is reduced by 31 bytes
+- Add the ability to load only the necessary method
+- Use dual-publish instead rollup
+- Use GitHub Actions instead Travis CI
+- Remove git hooks
+
 ## [4.1.2](https://github.com/alik0211/hardtack/compare/v4.1.1...v4.1.2) - 2019-10-01
 
 - Add prepublishOnly script ([ae1c00](https://github.com/alik0211/hardtack/commit/ae1c00f6f25fb5aaf8ba6ffce6334485805ecb55))
