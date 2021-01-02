@@ -1,6 +1,6 @@
 {
   "name": "hardtack",
-  "description": "An ultra-light (375 bytes) library for working with cookies in JavaScript",
+  "description": "An ultra-light (373 bytes) library for working with cookies in JavaScript",
   "version": "5.0.0",
   "files": [
     "index.js",
@@ -18,7 +18,7 @@
     {
       "name": "Full library",
       "path": "index.js",
-      "limit": "375 B"
+      "limit": "373 B"
     },
     {
       "name": "Method get",
