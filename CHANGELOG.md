@@ -1,5 +1,10 @@
 # Changelog
 
+## [5.0.1](https://github.com/alik0211/hardtack/compare/v5.0.0...v5.0.1) - 2021-01-02
+
+- The library size is reduced by 2 bytes
+- Fix default export in ES modules
+
 ## [5.0.0](https://github.com/alik0211/hardtack/compare/v4.1.2...v5.0.0) - 2021-01-02
 
 - The library size is reduced by 31 bytes
