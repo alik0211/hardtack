@@ -4,6 +4,7 @@
   "version": "5.0.1",
   "files": [
     "index.js",
+    "index.d.ts",
     "src/**/*.js"
   ],
   "license": "MIT",
